@@ -1,2 +1,6 @@
 .aptos/
 build/
+
+.coverage_map.mvcov
+.trace
+error_map.errmap
