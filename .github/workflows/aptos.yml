@@ -7,6 +7,9 @@ defaults:
   run:
     shell: nix shell .#aptos --command bash {0}
 
+env:
+  TERM: xterm-color
+
 jobs:
   build:
     name: Build and test
@@ -30,6 +33,8 @@ jobs:
 
       - run: aptos move compile
       - run: af-cli package test --coverage
-      - run: |
+      - run: af-cli package coverage --summarize-functions
+      - continue-on-error: true
+        run: |
           find build/*/bytecode_modules -maxdepth 1 -type f -iname "*.mv" -execdir basename '{}' .mv ';' \
-            | xargs -n 1 af-cli package coverage source --module
+            | xargs -n 1 af-cli package coverage source --module;
