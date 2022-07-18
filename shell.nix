@@ -6,29 +6,5 @@ stdenv.mkDerivation {
   buildInputs = [
     aptos
     move-cli-aptos
-
-    # Build tools
-    rustup
-
-    cmake
-    clang
-    pkg-config
-    openssl
-    nodejs
-
-    # Git
-    git
-  ] ++ (lib.optionals stdenv.isDarwin ([
-    libiconv
-  ] ++ (with darwin.apple_sdk.frameworks; [
-    DiskArbitration
-    Foundation
-  ])));
-
-  shellHook = ''
-    dotnet tool install --global boogie
-    export PATH=$HOME/.dotnet/tools:$PATH
-    export DOTNET_ROOT=${dotnet-sdk}
-    export BOOGIE_EXE=$HOME/.dotnet/tools/boogie
-  '';
+  ];
 }
