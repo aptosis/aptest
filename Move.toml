@@ -1,0 +1,28 @@
+[package]
+name = "aptest"
+version = "0.0.0"
+authors = ["Ian Macalinao <ian@aptos.is>"]
+license = "Apache-2.0"
+
+[readme]
+title = "aptest: Aptos Test Utilities"
+
+[addresses]
+Std = "0x1"
+# should never be used in production, so we hardcode this address
+aptest = "0xfaceb00c"
+
+[dependencies.MoveStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/move-stdlib"
+rev = "45140fcf79c2afd3ce8c86bb9952e90632533cbb"
+
+[dependencies.MoveNursery]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/move-stdlib/nursery"
+rev = "45140fcf79c2afd3ce8c86bb9952e90632533cbb"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = "45140fcf79c2afd3ce8c86bb9952e90632533cbb"
