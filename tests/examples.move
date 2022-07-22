@@ -3,6 +3,7 @@ module aptest::examples {
     use aptos_framework::account;
     use aptos_framework::test_coin::TestCoin;
 
+    use aptest::aptest;
     use aptest::acct;
     use aptest::check;
 
@@ -17,13 +18,13 @@ module aptest::examples {
         framework: signer,
         sender: signer
     ) {
-        acct::prepare(&resources, &framework);
-        acct::setup(&resources, &sender, 1000);
+        aptest::setup(&resources, &framework);
+        acct::create(&resources, &sender, 1000);
 
         // account should not exist initially
         assert!(!account::exists_at(@0xb0b), 1);
 
-        acct::create(&resources, @0xb0b, 1000);
+        acct::create_for(&resources, @0xb0b, 1000);
 
         // balance should now be 1000
         check::address_balance<TestCoin>(@0xb0b, 1000);
