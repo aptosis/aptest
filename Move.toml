@@ -9,8 +9,8 @@ title = "aptest: Aptos Test Utilities"
 
 [addresses]
 std = "0x1"
-# should never be used in production, so we hardcode this address
-aptest = "0xfaceb00c"
+# Derived from core
+aptest = "0xF876DE28A7BA37043985456ABBC03776C53FC5E6A4FFD88A99E097398AB89C49"
 
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
