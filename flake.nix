@@ -16,7 +16,7 @@
       in
       {
         packages = {
-          inherit (pkgs) aptos;
+          inherit (pkgs) af-cli;
         };
         devShells = {
           default = import ./shell.nix { inherit pkgs; };
