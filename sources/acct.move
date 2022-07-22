@@ -4,15 +4,8 @@ module aptest::acct {
     use std::signer;
 
     use aptos_framework::account;
-    use aptos_framework::coin;
-    use aptos_framework::test_coin::{Self, TestCoin};
+    use aptos_framework::test_coin;
     use aptos_framework::system_addresses;
-
-    /// Mint/burn capabilities for TestCoin. Not needed.
-    struct Trash has key {
-        mint_cap: coin::MintCapability<TestCoin>,
-        burn_cap: coin::BurnCapability<TestCoin>,
-    }
 
     /// Creates and funds an account.
     public entry fun create_for(
