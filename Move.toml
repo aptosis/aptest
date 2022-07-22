@@ -10,7 +10,7 @@ title = "aptest: Aptos Test Utilities"
 [addresses]
 std = "0x1"
 # Derived from core
-aptest = "0xF876DE28A7BA37043985456ABBC03776C53FC5E6A4FFD88A99E097398AB89C49"
+aptest = "0xf876de28a7ba37043985456abbc03776c53fc5e6a4ffd88a99e097398ab89c49"
 
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
