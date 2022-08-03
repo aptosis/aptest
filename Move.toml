@@ -15,14 +15,14 @@ aptest = "0xf876de28a7ba37043985456abbc03776c53fc5e6a4ffd88a99e097398ab89c49"
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/move-stdlib"
-rev = "a3143756d498821f4f51a5970c7ea35d483938b3"
+rev = "7296f138e11113fab6a1e193fc3f18fa7d08bd3e"
 
 [dependencies.MoveNursery]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/move-stdlib/nursery"
-rev = "a3143756d498821f4f51a5970c7ea35d483938b3"
+rev = "7296f138e11113fab6a1e193fc3f18fa7d08bd3e"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/aptos-framework"
-rev = "a3143756d498821f4f51a5970c7ea35d483938b3"
+rev = "7296f138e11113fab6a1e193fc3f18fa7d08bd3e"
