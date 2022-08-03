@@ -4,7 +4,7 @@ module aptest::acct {
     use std::signer;
 
     use aptos_framework::account;
-    use aptos_framework::test_coin;
+    use aptos_framework::aptos_coin;
     use aptos_framework::system_addresses;
 
     /// Creates and funds an account.
@@ -16,7 +16,7 @@ module aptest::acct {
         system_addresses::assert_core_resource(resources);
         account::create_account(recipient_addr);
         if (amount > 0) {
-            test_coin::mint(resources, recipient_addr, amount);
+            aptos_coin::mint(resources, recipient_addr, amount);
         };
     }
 

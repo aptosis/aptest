@@ -9,17 +9,12 @@
 
   outputs = { self, nixpkgs, flake-utils, move-nix, ... }:
     flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = (import nixpkgs {
-          inherit system;
-        }) // move-nix.packages.${system};
-      in
       {
         packages = {
-          inherit (pkgs) af-cli;
+          inherit (move-nix.packages.${system}) aptos;
         };
         devShells = {
-          default = import ./shell.nix { inherit pkgs; };
+          default = move-nix.devShells.${system}.aptos;
         };
       });
 }

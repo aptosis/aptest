@@ -25,12 +25,14 @@ module aptest::check {
         if (a != b) {
             // TODO: remove when [debug::print] supports strings
             // see: <https://github.com/move-language/move/pull/277/files>
-            debug::print(&@0xDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEAD);
+            debug::print(&@0xEEEE);
+            // log(b"Assertion failed");
 
-            log(b"Assertion failed");
-            log(b"Left:");
+            debug::print(&@0xAAAA);
+            // log(b"Left:");
             debug::print(&a);
-            log(b"Right:");
+            debug::print(&@0xBBBB);
+            // log(b"Right:");
             debug::print(&b);
             debug::print_stack_trace();
             abort EASSERT_EQ
@@ -41,12 +43,15 @@ module aptest::check {
         if (a != b) {
             // TODO: remove when [debug::print] supports strings
             // see: <https://github.com/move-language/move/pull/277/files>
-            debug::print(&@0xDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEAD);
+            debug::print(&@0xBEEE);
+            // log(b"Borrow assertion failed");
 
-            log(b"Borrow assertion failed");
-            log(b"Left:");
+            debug::print(&@0xAAAA);
+            // log(b"Left:");
             debug::print(a);
-            log(b"Right:");
+
+            debug::print(&@0xBBBB);
+            // log(b"Right:");
             debug::print(b);
             debug::print_stack_trace();
             abort EASSERT_BORROW_EQ

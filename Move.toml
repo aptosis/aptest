@@ -17,9 +17,9 @@ git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/move-stdlib"
 rev = "7296f138e11113fab6a1e193fc3f18fa7d08bd3e"
 
-[dependencies.MoveNursery]
+[dependencies.AptosStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
-subdir = "aptos-move/framework/move-stdlib/nursery"
+subdir = "aptos-move/framework/aptos-stdlib"
 rev = "7296f138e11113fab6a1e193fc3f18fa7d08bd3e"
 
 [dependencies.AptosFramework]

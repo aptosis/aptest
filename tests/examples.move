@@ -1,7 +1,7 @@
 #[test_only]
 module aptest::examples {
     use aptos_framework::account;
-    use aptos_framework::test_coin::TestCoin;
+    use aptos_framework::aptos_coin::AptosCoin;
 
     use aptest::aptest;
     use aptest::acct;
@@ -27,7 +27,7 @@ module aptest::examples {
         acct::create_for(&resources, @0xb0b, 1000);
 
         // balance should now be 1000
-        check::address_balance<TestCoin>(@0xb0b, 1000);
+        check::address_balance<AptosCoin>(@0xb0b, 1000);
     }
 
     #[test]
