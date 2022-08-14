@@ -4,9 +4,6 @@ version = "0.0.0"
 authors = ["Ian Macalinao <ian@aptos.is>"]
 license = "Apache-2.0"
 
-[readme]
-title = "aptest: Aptos Test Utilities"
-
 [addresses]
 std = "0x1"
 # Derived from core
@@ -15,14 +12,14 @@ aptest = "0xf876de28a7ba37043985456abbc03776c53fc5e6a4ffd88a99e097398ab89c49"
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/move-stdlib"
-rev = "5c7db667c915f18cb65e12be9a87310eb90e3cfe"
+rev = "3910637893b6aed4af73b19a2c429ef717e1ee26"
 
 [dependencies.AptosStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/aptos-stdlib"
-rev = "5c7db667c915f18cb65e12be9a87310eb90e3cfe"
+rev = "3910637893b6aed4af73b19a2c429ef717e1ee26"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
 subdir = "aptos-move/framework/aptos-framework"
-rev = "5c7db667c915f18cb65e12be9a87310eb90e3cfe"
+rev = "3910637893b6aed4af73b19a2c429ef717e1ee26"
