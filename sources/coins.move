@@ -17,12 +17,13 @@ module aptest::coins {
 
     struct CapabilityStore<phantom CoinType> has key {
         mint_cap: coin::MintCapability<CoinType>,
+        freeze_cap: coin::FreezeCapability<CoinType>,
         burn_cap: coin::BurnCapability<CoinType>,
     }
 
     /// Initializes a coin.
     public entry fun initialize<CoinType>() {
-        let (mint_cap, burn_cap) = coin::initialize<CoinType>(
+        let (burn_cap, freeze_cap, mint_cap) = coin::initialize<CoinType>(
             &aptest::get_signer(),
             string::utf8(type_info::struct_name(&type_info::type_of<CoinType>())),
             string::utf8(type_info::struct_name(&type_info::type_of<CoinType>())),
@@ -31,6 +32,7 @@ module aptest::coins {
         );
         move_to(&aptest::get_signer(), CapabilityStore {
             mint_cap,
+            freeze_cap,
             burn_cap,
         });
     }

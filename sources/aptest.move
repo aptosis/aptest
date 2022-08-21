@@ -14,17 +14,15 @@ module aptest::aptest {
 
     /// Sets up the aptest testing framework.
     public fun setup(
-        resources: &signer,
         framework: &signer,
     ) {
-        system_addresses::assert_core_resource(resources);
         system_addresses::assert_aptos_framework(framework);
-        let (mint_cap, burn_cap) = aptos_coin::initialize(framework, resources);
+        let (burn_cap, mint_cap) = aptos_coin::initialize_for_test(framework);
         coin::destroy_mint_cap(mint_cap);
         coin::destroy_burn_cap(burn_cap);
 
         let (aptest, signer_cap) = account::create_resource_account(
-            resources,
+            framework,
             b"aptest",
         );
         // derive the aptest address

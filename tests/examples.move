@@ -8,23 +8,21 @@ module aptest::examples {
     use aptest::check;
 
     #[test(
-        resources = @core_resources,
         framework = @aptos_framework,
         sender = @0xa11ce
     )]
     /// Test sending coins and initializing an account
     public entry fun test_create_account(
-        resources: signer,
         framework: signer,
         sender: signer
     ) {
-        aptest::setup(&resources, &framework);
-        acct::create(&resources, &sender, 1000);
+        aptest::setup(&framework);
+        acct::create(&framework, &sender, 1000);
 
         // account should not exist initially
         assert!(!account::exists_at(@0xb0b), 1);
 
-        acct::create_for(&resources, @0xb0b, 1000);
+        acct::create_for(&framework, @0xb0b, 1000);
 
         // balance should now be 1000
         check::address_balance<AptosCoin>(@0xb0b, 1000);

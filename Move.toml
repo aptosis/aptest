@@ -7,7 +7,7 @@ license = "Apache-2.0"
 [addresses]
 std = "0x1"
 # Derived from core
-aptest = "0xf876de28a7ba37043985456abbc03776c53fc5e6a4ffd88a99e097398ab89c49"
+aptest = "0xe873bafa3a041ac8972f1c0a7d7ab96701332959573a19e3416367461cc99f16"
 
 [dependencies.MoveStdlib]
 git = "https://github.com/aptos-labs/aptos-core.git"

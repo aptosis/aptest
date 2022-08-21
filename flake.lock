@@ -17,11 +17,11 @@
     },
     "flake-utils_2": {
       "locked": {
-        "lastModified": 1656928814,
-        "narHash": "sha256-RIFfgBuKz6Hp89yRr7+NR5tzIAbn52h8vT6vXkYjZoM=",
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "7e2a3b3dfd9af950a856d66b0a7d01e3c18aa249",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
         "type": "github"
       },
       "original": {
@@ -36,11 +36,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1660383097,
-        "narHash": "sha256-mJFjpMAVIFs+/EjB/mZX90z0WW2subbeDpHi6nfcPsg=",
+        "lastModified": 1660944917,
+        "narHash": "sha256-L7E8AMCAsK9yWaASOHxnC0O9Zeln/MqGiBVEdz06XM8=",
         "owner": "movingco",
         "repo": "move.nix",
-        "rev": "65ae6c2cd716f3befc11d0edb3d4473ef93c8e29",
+        "rev": "c60669e9c2b0e68f272ffdbec073746ca81159d6",
         "type": "github"
       },
       "original": {
@@ -51,11 +51,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1659464610,
-        "narHash": "sha256-X67Sbnn4lbo+RFWDjlG9oJsSWE6zg4S+LuQ5TLB2lCo=",
+        "lastModified": 1660607161,
+        "narHash": "sha256-wFM5Jcu+y2Rd07b4D9xwiVG/9snF64es8uu82MAysqs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f310f24f0d4cd5e8660ccde49e8cbd8dbf0295fa",
+        "rev": "a093c35beee0a64ad68312d747a4c49eaa5b1105",
         "type": "github"
       },
       "original": {
@@ -67,11 +67,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1660435756,
-        "narHash": "sha256-M2R7f3JvXIyyYyX50YxgasNCnFc0ES8S46eEfv8iIyE=",
+        "lastModified": 1661089880,
+        "narHash": "sha256-A+JmSLoBdJsmJEBfzzwhzQyL3B6aE+mCrVi4pEtXQtg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4fb60f3177290558355e1cdc2e03b9da449c41ef",
+        "rev": "520040da1eeb8558cd79bd4f0555866fcff2cced",
         "type": "github"
       },
       "original": {
