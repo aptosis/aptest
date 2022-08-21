@@ -1,7 +1,7 @@
 #[test_only]
 /// Helpers for coins.
 module aptest::coins {
-    use aptos_framework::coin;
+    use aptos_framework::coin::{Self, Coin};
     use aptos_framework::string;
     use aptos_framework::type_info;
 
@@ -38,8 +38,13 @@ module aptest::coins {
     }
 
     /// Mints coins.
-    public entry fun mint_to<CoinType>(to: address, amount: u64) acquires CapabilityStore {
+    public fun mint<CoinType>(amount: u64): Coin<CoinType> acquires CapabilityStore {
         let mint_cap = &borrow_global<CapabilityStore<CoinType>>(@aptest).mint_cap;
-        coin::deposit(to, coin::mint<CoinType>(amount, mint_cap));
+        coin::mint<CoinType>(amount, mint_cap)
+    }
+
+    /// Mints coins.
+    public entry fun mint_to<CoinType>(to: address, amount: u64) acquires CapabilityStore {
+        coin::deposit(to, mint<CoinType>(amount));
     }
 }
