@@ -3,7 +3,7 @@
 module aptest::acct {
     use std::signer;
 
-    use aptos_framework::account;
+    use aptos_framework::aptos_account;
     use aptos_framework::aptos_coin;
     use aptos_framework::system_addresses;
 
@@ -14,7 +14,7 @@ module aptest::acct {
         amount: u64
     ) {
         system_addresses::assert_aptos_framework(framework);
-        account::create_account(recipient_addr);
+        aptos_account::create_account(recipient_addr);
         if (amount > 0) {
             aptos_coin::mint(framework, recipient_addr, amount);
         };

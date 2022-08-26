@@ -11,7 +11,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       {
         packages = {
-          inherit (move-nix.packages.${system}) aptos;
+          inherit (move-nix.packages.${system}) aptos-cli;
         };
         devShells = {
           default = move-nix.devShells.${system}.aptos;
